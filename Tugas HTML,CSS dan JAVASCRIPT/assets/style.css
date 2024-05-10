@@ -1,0 +1,32 @@
+.container {
+    width: 1200px;
+   
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo img {
+    width: 70px;
+}
