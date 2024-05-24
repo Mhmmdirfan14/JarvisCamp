@@ -1,0 +1,43 @@
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+body {
+    background-color: rgb(253, 252, 255);
+}
+/* Hero section */
+
+#hero {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+
+.hero-name span {
+    color: var(--primaryIconColor) !important;
+}
+
+.hero-right img { 
+    width: 40%;
+  
+    border-radius: 10%;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
