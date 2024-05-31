@@ -17,12 +17,10 @@
               <div class="card mt-2">
                 <div class="card-body">
                   <h4 class="card-title">{{ $task['name'] }}</h4>
-                  <small>Dealine: {{ \Carbon\Carbon::parse($task['deadline'])->format('d F Y') }}</small> <br>
-                  <span class="badge bg-danger">{{ $task['status'] }}</span>
-                  <p class="card-text">{{ $task['description'] }}</p>
-
-                  <div class="mt-2">
-                    <a href="#" class="btn btn-warning">Detail</a>
+                  <small>Deadline: {{ \Carbon\Carbon::parse($task['deadline'])->format('d F Y') }}</small> <br>
+                  <span class="badge bg-danger mt-4">{{ $task['status'] }}</span>
+                  <div class="mt-4">
+                    <a href="{{ url('tasks/'.$task['id']) }}" class="btn btn-warning">Detail</a>
                   </div>
 
                 </div>
