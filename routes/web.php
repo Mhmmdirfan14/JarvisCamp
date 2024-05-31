@@ -15,8 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard.index');
 });
 
-// Route tugas
-Route::get('/tasks', [TaskController::class , 'index']);
+// Route Tugas
+Route::get('/tasks', [TaskController::class, 'index'])->name('tasks.index');
+Route::get('/tasks/{id}', [TaskController::class, 'show'])->name('tasks.show');
