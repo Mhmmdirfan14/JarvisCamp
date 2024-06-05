@@ -12,6 +12,7 @@ class TaskController extends Controller
      {
          // mengambil semua data $tasks
          $tasks = Task::getAll();
+         dd($tasks);
  
          // menampilkan data $tasks
          return view('tasks.index', [
