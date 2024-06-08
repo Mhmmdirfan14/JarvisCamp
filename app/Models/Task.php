@@ -18,7 +18,7 @@ class Task extends Model
         'description',
     ];
 
-    // mendefinisakan data Task
+    //mendefinisakan data Task
     // public static $tasks = [
     //     [
     //         'id' => 0,
@@ -47,13 +47,13 @@ class Task extends Model
     //     ]
     // ];
 
-    // mengambil data Task
+    //mengambil data Task
     // public static function getAll() 
     // {
     //     return self::$tasks;
     // }
 
-     // mengambil data Task 
+     //mengambil data Task 
     //  public static function find($id) 
     //  {
     //      return self::$tasks[$id];
