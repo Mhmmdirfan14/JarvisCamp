@@ -16,7 +16,16 @@ class Task extends Model
         'deadline',
         'status',
         'description',
+        'category',
     ];
+
+    public function status() {
+        return $this->belongsTo(Status::class);
+    }
+
+    public function categories() {
+        return $this->belongsTo(Categories::class);
+    }
 
     //mendefinisakan data Task
     // public static $tasks = [

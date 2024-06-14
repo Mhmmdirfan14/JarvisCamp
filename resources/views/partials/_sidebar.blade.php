@@ -8,8 +8,20 @@
                     Dashboard
                 </a>
                 <a class="nav-link" href="/tasks">
-                    <div class="sb-nav-link-icon"><i class="fa-solid fa-list"></i></div>
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-tasks"></i></div>
                     Task
+                </a>
+                <a class="nav-link" href="/projects">
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-bookmark"></i></div>
+                    Project
+                </a>
+                <a class="nav-link" href="/status">
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-compass"></i></div>
+                    Status
+                </a>
+                <a class="nav-link" href="/categories">
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-comments"></i></div>
+                    Category
                 </a>
             </div>
         </div>

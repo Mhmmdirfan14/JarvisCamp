@@ -11,7 +11,7 @@
                 <div class="card-body">
                   <h4 class="card-title">{{ $task['name'] }}</h4>
                   <small>Deadline: {{ \Carbon\Carbon::parse($task['deadline'])->format('d F Y') }}</small> <br>
-                  <span class="badge bg-danger mt-4">{{ $task['status'] }}</span>
+                  <span class="badge bg-danger mt-4">{{ $task->status->name}}</span>
                   <p class="mt-4">{{ $task['description'] }}</p>
                   <div class="mt-4">
                     <a href="/tasks" class="btn btn-warning">Detail</a>

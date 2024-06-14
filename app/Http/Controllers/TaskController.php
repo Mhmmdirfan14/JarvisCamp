@@ -43,11 +43,48 @@ class TaskController extends Controller
 
      public function store(Request $request) {
         $data = $request->validate([
-            'nama' => "required|max: 255",
-            'deadliine' => "required|date",
+            'name' => "required|max: 255",
+            'deadline' => "required|date",
             'status' => 'required|in:Belum Dikerjakan, Sedang Dikerjakan, Selesai',
+            'description' => 'required',
+            // 'category' => 'required'
+        ]);
+
+        Task::create($data);
+
+        return redirect()->route('tasks.list');
+     }
+
+     public function edit(string $id) {
+        $task = Task::find($id);
+        return view('tasks.edit', compact('task'));
+     }
+
+     public function update(Request $request, string $id) {
+       $request->validate([
+            'name' => "required|max: 255",
+            'deadline' => "required|date",
+            'status' => 'required|in:Belum Dikerjakan,Sedang Dikerjakan,Selesai',
             'description' => 'required'
         ]);
+
+        $task = Task::find($id);
+
+        $task->update([
+            'name' => $request->name,
+            'deadline' => $request->deadline,
+            'status' => $request->status,
+            'description' => $request->description,
+            // 'category' => $request->category
+        ]);
+
+        return redirect()->route('tasks.list');
+     }
+
+     public function delete(string $id) { 
+        Task::find($id)->delete();
+
+        return redirect()->route('tasks.list');
      }
 }
  

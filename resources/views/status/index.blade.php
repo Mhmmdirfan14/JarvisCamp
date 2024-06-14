@@ -1,7 +1,7 @@
 @extends('template')
 @section('content')
     <div class="container">
-        <h1 class="text-center">Daftar Tabel Tugas</h1>
+        <h1 class="text-center">Daftar Tabel Status</h1>
 
         <div class="card mt-3">
             <div class="card-header">
@@ -9,31 +9,24 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <a href="{{ route('tasks.create') }}" class="btn btn-primary btn-sm">tambah data</a>
+                    <a href="{{ route('status.create') }}" class="btn btn-primary btn-sm">tambah data</a>
                     <table class="table">
                         <thead>
                             <tr>
                                 <th>No</th>
                                 <th>Nama</th>
-                                <th>Status</th>
-                                <th>Deadline</th>
-                                <th>Deskripsi</th>
-                                {{-- <th>Kategori</th> --}}
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($tasks as $task)
+                            @foreach ($statuses as $status)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $task->name }}</td>
-                                <td>{{ $task->status->name }}</td>
-                                <td>{{ $task->deadline }}</td>
-                                <td>{{ substr($task->description, 0, 50)  }} ...</td>
-                                {{-- <td>{{ $task->category }}</td> --}}
+                                <td>{{ $status->name}}</td>
+                                
                                 <td class="d-flex"> 
-                                    <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-warning btn-sm">edit</a>
-                                    <form action="{{ route('tasks.delete', $task->id) }}" method="post">
+                                    <a href="{{ route('status.edit', $status->id) }}" class="btn btn-warning btn-sm">edit</a>
+                                    <form action="{{ route('status.delete', $status->id) }}" method="post">
                                         @csrf
                                         @method('delete')
                                         <button type="submit" class="btn btn-danger btn-sm">hapus</button>
